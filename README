@@ -1,0 +1,5 @@
+\-/-\/-\-/-\/-\-/-\/-\-/-\/-\-/-\/-\-/- Bem-Vindo -\-/-\/-\-/-\-/-\/-\-/-\/-\-/-\/-\
+
+Os Arquivos desse repositorio conta monta um sistema de cadastro de usuario com senha
+e login, e ai final os dados inseridos são salvo em um banco de dados e impressos no
+console, mostrando o nomes dos usuarios que foram cadastrados.
