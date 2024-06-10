@@ -1,5 +1,6 @@
 package io.cadastroLogin.Gustavo;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Cadastro {
@@ -10,11 +11,16 @@ public class Cadastro {
         System.out.println("Digite seu usuario abaixo: \n");
 
         String usuario = sc.nextLine();
-        System.out.println("Seu nome de usuario é: " + usuario);
+        System.out.println("Seu usuario é: " + usuario);
 
+        System.out.println("\nDigite a uma senha abaixo: \n");
         String password = sc.nextLine();
-        System.out.println("Digite a uma senha abaixo: \n");
-        System.out.println("Presione enter para confirmar sua senha: " + password);
+        password = password.replaceAll(password, pass);
+        String pass = JOptionPane.showInputDialog(null, "****************");
+        JOptionPane.showConfirmDialog(null, pass);
+
+
+        System.out.println("Seu usuario é: " + usuario + " e sua senha é: " + pass);
 
     }
 }
