@@ -10,7 +10,7 @@ public class Conection {
 
     private static final String url = "jdbc:mysql://localhost:3306/bancodedados";
     private static final String user = "root";
-    private static final String pasword = "root";
+    private static final String pasword = "Gustavo@14";
 
     private static Connection coon;
 

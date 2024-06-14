@@ -5,7 +5,7 @@ import java.lang.String;
 public class user {
     private int codigo;
     private String login;
-    private String nome;
+    private String name;
     private String email;
     private String password;
 
@@ -23,11 +23,11 @@ public class user {
     public void setLogin(String Login) {
         this.login = login;
     }
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
-    public void setNome (String Nome) {
-        this.nome = nome;
+    public void setName (String Nome) {
+        this.name = name;
     }
 
     public String getEmail() {

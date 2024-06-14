@@ -9,12 +9,12 @@ public class userDAO {
 
     public void registerUser(user user) {
 
-        String sql = "INSET INTO USER (NOME, LOGIN, SENHA, EMAIL) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO USER (NAME, LOGIN, PASSWORD, EMAIL) VALUES (?, ?, ?, ?)";
 
         PreparedStatement ps = null;
         try {
             ps = Conection.getConection().prepareStatement(sql);
-            ps.setString(1, user.getNome());
+            ps.setString(1, user.getName());
             ps.setString(2, user.getEmail());
             ps.setString(3, user.getPassword("1234"));
             ps.setString(4, user.getLogin());
