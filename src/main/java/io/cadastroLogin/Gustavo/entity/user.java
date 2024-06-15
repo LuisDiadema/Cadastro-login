@@ -1,6 +1,7 @@
 package io.cadastroLogin.Gustavo.entity;
 
 import java.lang.String;
+import java.util.Scanner;
 
 public class user {
     private int codigo;
@@ -17,27 +18,29 @@ public class user {
         this.codigo = codigo;
     }
 
-    public String getLogin() {
+    public String getLogin(String login) {
         return login;
     }
     public void setLogin(String Login) {
         this.login = login;
     }
-    public String getName() {
+    public String getName(String name) {
         return name;
     }
     public void setName (String Nome) {
         this.name = name;
     }
 
-    public String getEmail() {
+    public String getEmail(String email) {
         return email;
     }
     public void setEmail(String Email) {
         this.email = email;
     }
 
-    public String getPassword(String number) {
+    public String getPassword(String password) {
+        Scanner pass = new Scanner(System.in);
+        String pas = pass.nextLine();
         return password;
     }
     public void setPassword(String Password) {

@@ -14,10 +14,10 @@ public class userDAO {
         PreparedStatement ps = null;
         try {
             ps = Conection.getConection().prepareStatement(sql);
-            ps.setString(1, user.getName());
-            ps.setString(2, user.getEmail());
+            ps.setString(1, user.getName("luis"));
+            ps.setString(2, user.getEmail("luis.gustavo.sene99@gmail.com"));
             ps.setString(3, user.getPassword("1234"));
-            ps.setString(4, user.getLogin());
+            ps.setString(4, user.getLogin("LuisinhoDiadema"));
 
             ps.execute();
             ps.close();
