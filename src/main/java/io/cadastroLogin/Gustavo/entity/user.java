@@ -1,7 +1,6 @@
 package io.cadastroLogin.Gustavo.entity;
 
 import java.lang.String;
-import java.util.Scanner;
 
 public class user {
     private int codigo;
@@ -39,8 +38,6 @@ public class user {
     }
 
     public String getPassword(String password) {
-        Scanner pass = new Scanner(System.in);
-        String pas = pass.nextLine();
         return password;
     }
     public void setPassword(String Password) {
