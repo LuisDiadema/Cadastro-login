@@ -25,7 +25,7 @@ public class userDAO {
             aster = aster.replaceAll(aster, "****");
         }
 
-        System.out.println("\nPrecione enter para continua");
+        System.out.println("\nDigite o seu e-mail: \n");
         String email = sc.nextLine();
         if (email.contains("@")) {
             System.out.println("\nSeu e-mail e: " + email);
@@ -37,8 +37,10 @@ public class userDAO {
             System.out.println("\nSeu e-mail é: " + email);
 
         } else {
-            System.out.println("Está faltando algo no seu e-mail, tente novamente!!\n");
+            System.out.println("\nEstá faltando algo no seu e-mail, tente novamente!!\n");
         }
+
+        System.out.println("\nCadastro completo confirme as informações a seguir: \n\n" + "Nome: " + name + "\nUsuario: " + login + "\nSenha: " + senha + "\nE-mail: " + email);
 
         String sql = "INSERT INTO USER (NAME, LOGIN, PASSWORD, EMAIL) VALUES (?, ?, ?, ?)";
 
