@@ -14,17 +14,6 @@ public class userDAO {
         System.out.println("Digite seu nome completo abaixo: \n");
         String name = sc.nextLine();
 
-        System.out.println("\nCrie um usuario: \n");
-        String login = sc.nextLine();
-
-
-        System.out.println("\nCrie uma senha de 4 digitos (Somente números): \n");
-        String senha = sc.nextLine();
-        String aster = senha;
-        for (int i = 0; i < 1; i++) {
-            aster = aster.replaceAll(aster, "****");
-        }
-
         System.out.println("\nDigite o seu e-mail: \n");
         String email = sc.nextLine();
         if (email.contains("@")) {
@@ -40,17 +29,28 @@ public class userDAO {
             System.out.println("\nEstá faltando algo no seu e-mail, tente novamente!!\n");
         }
 
-        System.out.println("\nCadastro completo confirme as informações a seguir: \n\n" + "Nome: " + name + "\nUsuario: " + login + "\nSenha: " + senha + "\nE-mail: " + email);
+        System.out.println("\nCrie um usuario: \n");
+        String login = sc.nextLine();
 
-        String sql = "INSERT INTO USER (NAME, LOGIN, PASSWORD, EMAIL) VALUES (?, ?, ?, ?)";
+
+        System.out.println("\nCrie uma senha de 4 digitos (Somente números): \n");
+        String senha = sc.nextLine();
+        String aster = senha;
+        for (int i = 0; i < 1; i++) {
+            aster = aster.replaceAll(aster, "****");
+        }
+
+        System.out.println("\nCadastro completo confirme as informações a seguir: \n\n" + "Nome: " + name + "\nUsuario: " + login + "\nSenha: " + aster + "\nE-mail: " + email);
+
+        String sql = "INSERT INTO USER (NAME, EMAIL, LOGIN, PASSWORD) VALUES (?, ?, ?, ?)";
 
         PreparedStatement ps = null;
         try {
             ps = Conection.getConection().prepareStatement(sql);
             ps.setString(1, user.getName(name));
-            ps.setString(2, user.getLogin(login));
-            ps.setString(3, user.getPassword(senha));
-            ps.setString(4, user.getEmail(email));
+            ps.setString(2, user.getEmail(email));
+            ps.setString(3, user.getLogin(login));
+            ps.setString(4, user.getPassword(senha));
 
             ps.execute();
             ps.close();
